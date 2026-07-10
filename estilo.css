@@ -1,0 +1,411 @@
+body {
+    background-color: #041714;
+    display: flex;
+    flex-direction: column;
+   
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #041714;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    padding: 15px;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li {
+margin-left: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #fffefe;
+    font-weight: 500;
+    transition: color 0.3s ease;
+     font-family: Arial, Helvetica, sans-serif
+}
+.nav-links a:hover  {
+    color: #007bff;
+    
+}
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+    z-index: -1;
+}
+.header-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.contenedor-superpuesto {
+    position: absolute;
+    bottom: -50px;
+    transform: translateX(-50%)
+    color: #eedb44;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.botton-accion {
+padding: 15px 30px;
+background-color: #134e43;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+color: #f9f9f9;
+}
+.botton-accion:hover {
+    background-color: #011411;
+    transform: scale(1.05);
+}
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     border-bottom: 2px solid #333;
+     
+}
+.frase-promocional {
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+     color: #c8a96a;
+     font-family: Arial, Helvetica, sans-serif
+  
+
+    
+}
+.bloque-contenido {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 120px;
+  flex-direction: row;
+  gap: 20px;
+  border-bottom: 2px solid #333;
+
+}
+
+.texto {
+  flex: 1; /* Esto hace que ambos ocupen el mismo ancho */
+  padding: 20px;
+  
+  
+}
+
+h1 {
+    color: #f7f6f1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    font-size: 2.5rem;
+     font-family: Arial, Helvetica, sans-serif;
+    
+}
+h2 {
+    color: #c8a96a;
+     font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+p {
+    color: #f9f9f9;
+    font-size: 1.2rem;
+     font-family: Arial, Helvetica, sans-serif;
+}
+.imagen img {
+  width: 370px; /* Ajusta el tamaño según necesites */
+  height: 370px; /* Mismo valor que el ancho */
+  border-radius: 50%; /* Esto hace que la imagen sea circular */
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+   flex: 1; /* Esto hace que ambos ocupen el mismo ancho */
+  padding: 20px;
+}
+
+.carrusel-contenedor {
+    width: 100%;
+    overflow: hidden;
+    background: #c8a96a;
+    padding: 40px 0;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+   
+}
+
+.carrusel-tack {
+    display: flex;
+    width: max-content;
+    height: 250px;
+    object-fit: cover;
+    margin: 0 10px;
+    animation: movercarrusel 10s linear infinite;
+    
+}
+.carrusel-tack img {
+    width: 150px;
+    margin: 0 5px;
+   
+}
+
+@keyframes movercarrusel {
+   0% { transform: translateX(0);}
+   100% { transform: translateX(-50%);}
+}
+.carrusel-tack:hover {
+    animation-play-state: paused;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 30px 0;
+    margin: 0px 120px;
+}
+.box {
+    background: #ffffff;
+    border: 5px solid #c8a96a ;
+    border-radius: 12px;
+    padding: 60px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+.box:hover {
+    transform: scale(1.05);
+}
+.vs {
+    align-self: center;
+    font-weight: bold;
+    font-size: 18px;
+    background:#c8a96a;
+    color: white;
+    padding: 10px;
+    border-radius: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-block {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    font-style: italic;
+    color: #000;
+    margin: 20px 120px;
+}
+p2 {
+  font-size: 1.2rem;
+     font-family: Arial, Helvetica, sans-serif;  
+     color: #000;
+}
+.titulo-vs {
+    display: flex;
+justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-bottom: 2px solid #333;
+}
+.titulo-2 {
+    color: #c8a96a;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+.video-youtubr {
+    position: relative;
+    width:85%;
+    padding-bottom: 60%;
+    height: 0;
+    overflow: hidden;
+     margin: 20px 120px;
+   
+}
+.video-youtubr iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+.conclusion {
+    overflow: hidden;
+    background: #041714;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    margin: 50px 120px;
+    
+}
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+   } 
+.botton-enlace {
+padding: 20px 200px;
+background-color: #c8a96a;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+color: #041714;
+font-size: 1.3rem;
+}
+.botton-enlace:hover {
+    background-color: #134e43;
+    transform: scale(1.05);
+    color: #f9f9f9;
+    }
+ 
+.botton-github {
+padding: 20px 100px;
+background-color: #c8a96a;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+color: #041714;
+font-size: 1rem;
+}
+.botton-github:hover {
+    background-color: #134e43;
+    transform: scale(1.05);
+    color: #f9f9f9;
+    }
+.contenedor-github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.biblioteca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #134e43;
+    padding: 15px;
+    border-radius: 30px;
+    font-family: none;
+    font-size: 3rem;
+    cursor: pointer;
+
+}
+.contenedor-principal { max-width: 1200px; margin: auto; padding: 20px; }
+
+/* Grid de 3 columnas para los libros */
+.grid-libros { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    margin: 30px 0; 
+}
+
+/* Diseño de la tarjeta */
+.tarjeta { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease; /* Suaviza el efecto hover */
+     cursor: pointer;
+}
+.tarjeta img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Efectos Hover */
+.tarjeta:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+}
+
+/* Estilo del botón */
+.boton { 
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #134e43; 
+    color: #f7f6f1; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background 0.3s;
+}
+
+.boton:hover { background-color: #c8a96a;
+color: #134e43; }
+
+
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Crea el efecto de profundidad */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;  
+}
+
+/* Efecto Hover: Al pasar el mouse, gira 180 grados */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Posicionamiento de las caras */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+}
+
+.card-back {
+  transform: rotateY(180deg); /* La parte trasera empieza invertida */
+  background: #f4f4f4;
+  padding: 20px;
+
+}
+.contenedor-biografias img {
+   display:grid; 
+    grid-template-columns: repeat(3, 300px); 
+    gap: 40px; 
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
