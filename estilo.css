@@ -375,7 +375,7 @@ color: #134e43; }
   transform-style: preserve-3d;  
 }
 
-/* Efecto Hover: Al pasar el mouse, gira 180 grados */
+
 .card:hover .card-inner {
   transform: rotateY(180deg);
 }
@@ -394,7 +394,7 @@ color: #134e43; }
   padding: 20px;
 
 }
-.contenedor-biografias img {
+.contenedor-biografias {
    display:grid; 
     grid-template-columns: repeat(3, 300px); 
     gap: 40px; 
@@ -403,9 +403,3 @@ color: #134e43; }
 
 }
 
-.card-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
