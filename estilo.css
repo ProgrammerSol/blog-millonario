@@ -129,7 +129,7 @@ h2 {
    
 }
 
-p {
+p, li {
     color: #f9f9f9;
     font-size: 1.2rem;
      font-family: Arial, Helvetica, sans-serif;
@@ -361,7 +361,7 @@ font-size: 1rem;
 color: #134e43; }
 
 
-header-1 {text-align: center;
+header-1 {
 
     padding: 0px 180px;}
 
@@ -426,6 +426,14 @@ button:hover {
     .container  {
         grid-template-columns: 1fr; /* 1 sola columna en móviles */}
 
+        header-1 {
+            padding: 0px 20px;
+        }
+
+        .card-front img { 
+            width: 80%;
+        }
+
         .contenedor-principal {
             grid-template-columns: 1fr;
         }
@@ -461,3 +469,42 @@ button:hover {
 .conclusion-box li {
     margin-bottom: 10px;
 }
+
+
+
+.accordion { max-width: 800px; margin: 40px auto; }
+
+.item { background: white; margin-bottom: 10px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+.question { 
+    width: 100%; 
+    padding: 20px 200px; 
+    border: none; background: #007bff; 
+    text-align: left; font-size: 1.1em; cursor: pointer; transition: 0.3s;
+}
+
+.question:hover { background: #3498db; color: white; }
+
+.answer { display: none; padding: 20px; background: #fafafa; border-top: 1px solid #ddd; }
+
+.result-section { 
+    max-width: 800px; margin: 30px auto; padding: 20px; 
+    background: #2ecc71; color: white; border-radius: 10px; text-align: center;
+}
+
+.nav-button { text-align: center; margin-top: 30px; }
+.nav-button a { 
+    padding: 10px 30px; background: #333; color: white; text-decoration: none; border-radius: 5px; 
+    transition: 0.3s; 
+}
+.nav-button a:hover { transform: scale(1.1); background: #000; }
+@media (max-width: 600px) {
+    .accordion {
+        width: 95%; /* Que ocupe casi todo el ancho de la pantalla */
+        margin: 20px auto;
+    }
+
+    .question {
+        font-size: 1em; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+        padding: 15px;
+    }

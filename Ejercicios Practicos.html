@@ -18,5 +18,67 @@
 </ul>
     </nav>
 </header>
+
+<body>
+
+    <header-1>
+        <h2 class="biblioteca">EJERCICIOS PRACTICOS</h2>
+        <p>Aplica estos hábitos para mejorar tu mentalidad y finanzas.</p>
+    </header-1>
+
+    <div class="accordion">
+        <div class="item">
+            <button class="question">1. Aplica la técnica del "Págate a ti primero"</button>
+            <div class="answer">
+                <p2>La mayoría de las personas reciben sus ingresos, pagan las deudas, compran la comida, se dan un gusto y, si sobra algo, lo ahorran (alerta: nunca sobra). 
+                    <br>
+                    <br>
+                    La mentalidad millonaria lo hace al revés. Apenas entra dinero a tu cuenta, separa el 10% (o el porcentaje que puedas, aunque sea el 5%) y envíalo a una cuenta de ahorros o inversión que no uses para el día a día. Ese dinero es intocable; es el pago por tu futuro. Luego, oblígate a vivir con el 90% restante.
+                    <br>
+                    <br>
+
+                    El efecto mental: Tu cerebro se adapta rápido a la escasez simulada y te vuelves más creativo para hacer rendir el resto, rompiendo el hábito de gastar según lo que ves disponible en la cuenta.</p2>
+            </div>
+        </div>
+
+        <div class="item">
+            <button class="question">2. Lectura financiera diaria</button>
+            <div class="answer">
+                <p2>Dedica 20 minutos al día a leer sobre finanzas, inversiones o biografías de éxito.</p2>
+            </div>
+        </div>
+
+        <div class="item">
+            <button class="question">3. Planificación de metas</button>
+            <div class="answer"><p2>Contenido del ejercicio 3...</p2></div>
+        </div>
+        <div class="item">
+            <button class="question">4. Networking estratégico</button>
+            <div class="answer"><p2>Contenido del ejercicio 4...</p2></div>
+        </div>
+        <div class="item">
+            <button class="question">5. Análisis de gastos</button>
+            <div class="answer"><p2>Contenido del ejercicio 5...</p2></div>
+        </div>
+    </div>
+
+    <div class="result-section">
+        <p><strong>Al poner estos ejercicios en práctica:</strong> notarás un cambio drástico en tu autodisciplina y en la claridad de tus metas a largo plazo.</p>
+    </div>
+
+    <div class="nav-button">
+        <a href="index.html">Volver a Inicio</a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
