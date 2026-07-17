@@ -502,13 +502,7 @@ button:hover {
 
 
 /* Estilos generales para asegurar que el contenido quepa bien */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    height: 100%; /* Importante para que la página ocupe el alto de la ventana */
-    box-sizing: border-box;
-}
+
 
 /* Contenedor específico para ESTA página que aplica el fondo de dólares */
 .finanzas-page {
@@ -686,6 +680,62 @@ body, html {
 
 .back-button:hover {
     background-color: #B09978;
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 60px;
+    padding: 50px;
+    justify-content: center;
+}
+
+.boton-3d {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px; /* Bordes redondeados */
+    
+    /* Efecto 3D inicial */
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 0 #999; 
+    transition: all 0.1s ease;
+}
+
+/* Efecto al pasar el mouse (hover) */
+.boton-3d:hover {
+    box-shadow: 0 5px 0 #777;
+    transform: translateY(3px);
+}
+
+/* Efecto al hacer clic (presionar) */
+.boton-3d:active {
+    box-shadow: 0 0 0 #555;
+    transform: translateY(8px);
+}
+
+.imagen-placeholder {
+    width: 250px;
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+
+.imagen-placeholder img {
+    width: 250px;
+    height: 250px;
+}
+
+span {
+    font-size: 1.2rem;
+    color: #011411;
 }
 
 /* Ajustes para pantallas pequeñas */
