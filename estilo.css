@@ -498,6 +498,224 @@ button:hover {
     transition: 0.3s; 
 }
 .nav-button a:hover { transform: scale(1.1); background: #000; }
+
+
+
+/* Estilos generales para asegurar que el contenido quepa bien */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 100%; /* Importante para que la página ocupe el alto de la ventana */
+    box-sizing: border-box;
+}
+
+/* Contenedor específico para ESTA página que aplica el fondo de dólares */
+.finanzas-page {
+    background-image: url('fondo.png.jfif');
+    background-size: cover; /* Cubre toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    min-height: 100vh; /* Mínimo el alto de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /* Espaciado superior/inferior y laterales */
+}
+
+/* Contenedor para la imagen circular y la tarjeta */
+.main-card-container {
+    position: relative;
+    margin-top: 80px; /* Espacio para que la imagen sobresalga arriba */
+    max-width: 450px; /* Ancho máximo de la tarjeta */
+    width: 100%;
+}
+
+/* Contenedor de la imagen circular */
+.profile-circle-container {
+    position: absolute;
+    top: -80px; /* Saca la imagen del flujo normal para que suba */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Asegura que esté por encima de la tarjeta */
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 8px solid #025E56; /* Borde verde oscuro */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.profile-circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el círculo perfectamente */
+}
+
+/* Tarjeta principal beige */
+.main-card {
+    background-color: #C4AC8A; /* Color beige oscuro */
+    border: 5px solid #025E56; /* Borde verde oscuro */
+    border-radius: 40px;
+    padding: 100px 30px 40px; /* Padding superior grande para dejar espacio a la foto */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Título */
+.main-title {
+    font-size: 50px;
+    font-weight: 800;
+    color: #f4db1e;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor de botones */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo base de los botones */
+.accordion-button {
+    background: linear-gradient(180deg, #028171 0%, #025E56 100%);
+    color: white;
+    border: none;
+    padding: 18px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.accordion-button:hover {
+    background: linear-gradient(180deg, #039684 0%, #026B61 100%);
+}
+
+/* Icono de flecha para el acordeón */
+.accordion-button::after {
+    content: '▼';
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    float: right;
+    margin-top: 4px;
+    transition: transform 0.4s ease;
+}
+
+/* Rotación del icono cuando está activo */
+.accordion-button.active::after {
+    transform: rotate(180deg);
+}
+
+/* Panel de información desplegable */
+.panel {
+    background-color: #011411; /* Un beige un poco más claro para el panel */
+    border-radius: 0 0 15px 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, margin-bottom 0.4s ease-out;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    /* Borde inferior cuando está abierto */
+    border: none; /* Se quita el borde cuando está cerrado */
+}
+
+/* Añadir padding y borde solo cuando el panel está abierto */
+.accordion-button.active + .panel {
+    padding: 15px 20px;
+    border: 1px solid #025E56;
+    border-top: none;
+}
+
+.panel p {
+    margin: 0;
+}
+
+/* Barra de texto inferior */
+.bottom-text-bar {
+    background-color: #025E56; /* Fondo verde oscuro */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-top: 25px; /* Espacio entre la tarjeta y la barra */
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.bottom-text-bar p {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Botón Volver al Inicio */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #C4AC8A; /* Beige */
+    color: #025E56; /* Texto verde */
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    border: 2px solid #025E56;
+}
+
+.back-button:hover {
+    background-color: #B09978;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .finanzas-page {
+        padding: 40px 15px;
+    }
+    .main-card-container {
+        margin-top: 60px;
+    }
+    .profile-circle-container {
+        width: 130px;
+        height: 130px;
+        top: -65px;
+        border-6px solid #025E56;
+    }
+    .main-card {
+        padding: 80px 20px 30px;
+    }
+    .main-title {
+        font-size: 30px;
+    }
+    .accordion-button {
+        font-size: 16px;
+        padding: 15px 15px;
+    }
+}
+
+
+
 @media (max-width: 600px) {
     .accordion {
         width: 95%; /* Que ocupe casi todo el ancho de la pantalla */
@@ -508,3 +726,58 @@ button:hover {
         font-size: 1em; /* Ajusta el tamaño de fuente para pantallas pequeñas */
         padding: 15px;
     }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('tu-imagen-de-fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    background: url('tu-foto-perfil.jpg') no-repeat center center;
+    background-size: cover;
+    border: 6px solid #1a4d2e; /* Color oscuro */
+    border-radius: 50%;
+    margin: 0 auto -60px auto; /* Superposición */
+    z-index: 1;
+    position: relative;
+}
+
+.card {
+    background-color: #cbb27a; /* Color arena */
+    border: 4px solid #1a4d2e;
+    border-radius: 25px;
+    padding: 70px 20px 20px 20px;
+}
+
+h1 { color: #1a4d2e; }
+
+.btn {
+    display: block;
+    margin: 15px 0;
+    padding: 15px;
+    background: linear-gradient(to right, #1a4d2e, #2e8b57);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.footer-box {
+    background: #1a4d2e;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
