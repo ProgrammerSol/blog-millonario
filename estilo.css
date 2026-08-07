@@ -833,7 +833,7 @@ body {
     height: 100px;
     background: url('tu-foto-perfil.jpg') no-repeat center center;
     background-size: cover;
-    border: 6px solid #1a4d2e; /* Color oscuro */
+    border: 6px solid oklab(37.671% -0.06834 0.03373)13.48); /* Color oscuro */
     border-radius: 50%;
     margin: 0 auto -60px auto; /* Superposición */
     z-index: 1;
