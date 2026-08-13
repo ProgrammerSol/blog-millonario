@@ -188,7 +188,9 @@ h1 {
 
   @media (max-width: 768px) {
     h1 {
-        font-size: 8em;
+        font-size: 6em;
+        background-size:cover;
+
     }
 
   }
